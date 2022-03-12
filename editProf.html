@@ -1,0 +1,81 @@
+<html>
+    <header>
+        <title>
+            Edit Profile
+        </title>
+        <style>
+            body{
+            background-color: rgba(178, 189, 206, 0.397);
+            }
+            .Input_form{
+                max-width: 500px;
+                margin: auto;
+                border-radius: 5px;
+                background-color: rgb(177, 206, 174);
+                padding: 15px;
+            }
+            input[type = text], select{
+                width:100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display:inline-block;
+                border:1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            input[type = Number], select{
+                width:100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display:inline-block;
+                border:1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            input[type = submit]{
+                width:100%;
+                padding: 14px 20px;
+                background-color: rgb(101, 102, 116);
+                margin: 8px 0;
+                display:inline-block;
+                border:1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                cursor: pointer;
+            } 
+            input[type=submit]:hover{
+                background-color: rgb(137, 158, 101);
+            }
+
+        </style>
+    </header>
+    <Body>
+        <div class = "Input_Form">
+        <form action="data_entry_books.php" method="POST">
+            <label for = "First Name" > First Name</label>
+            <input type="text" name = "First_Name" placeholder="John" required>
+            <label for = "Middle Initial"> Middle Initial</label>
+           <input type="text" name = "Middle_Initial" placeholder="B" required>
+            <label for ="Last Name">Last Name</label>
+            <input type="text" name = "Last_Name" placeholder="Smith" required>
+
+            <label for ="Address 1">Address 1</label>
+            <input type = "text" name = "add1" placeholder="12345 Randomstreet Dr" required>
+            <label for = "Address 2">Address 2</label>
+           <input type = "text" name = "add2" placeholder="(Optional) Apt 123" >
+           
+            <label for ="City">City</label>
+            <input type = "text" name = "city" placeholder = "Houston">
+           
+            
+            <label for = "State"> State </label>
+            <input type = "text" name = "state" placeholder = "Texas">
+
+            <label for = "Zipcode">Zipcode</label>
+            <input type="number" name = "zipcode" min= "11111" placeholder="12345"> 
+            <input type ="submit" name = "Submit">
+
+        </form>
+    </div>
+    </Body>
+</html>
