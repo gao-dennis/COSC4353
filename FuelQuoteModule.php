@@ -6,7 +6,7 @@
 
 //$conn = mysqli_connect($dbServername,$dbUsername,$dbPassword,$dbName);
 
-
+if (isset($_POST['FuelQuote'])){
 $gallons = $_POST['gallons'];
 $address = $_POST['address'];
 $deliveryDate = $_POST['deliveryDate'];
@@ -51,6 +51,7 @@ else {
 $final_string .= "'".$dewy."'";
 }
 
+
 /*
 $sql = "INSERT INTO `Books`(`UUID`, `title`, `author_first_name`, `author_last_name`, `publisher`, `genre`, `language`, `year`, `pages`, `dewy_decimal`) 
 VALUES  ($final_string);";
@@ -65,10 +66,12 @@ else {
     header("Location: ../data_entry.html");
 
 }
-
-
-
-
-$conn -> close();
 */
+
+
+}
+//$conn -> close();
+
+
+
 ?>
