@@ -44,12 +44,13 @@ foreach($variables_array as $string){
     $final_string .= "',";
     }
 }
-if ($dewy == ""){
-    $final_string .= $Null;
-}
-else {
-$final_string .= "'".$dewy."'";
-}
+
+//if ($dewy == ""){
+//    $final_string .= $Null;
+//}
+//else {
+//$final_string .= "'".$dewy."'";
+//}
 
 
 /*
