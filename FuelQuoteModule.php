@@ -14,6 +14,11 @@ $pricePerGal = $_POST['pricePerGal'];
 $totalPrice = $_POST['totalPrice'];
 $Null = "NULL";
 
+
+$address = "Test Address";
+$pricePerGal = "Test Price";
+$totalPrice = "Test Total";
+
 #Insert into item first
 /*
 $Appended_UUID .= "'".$UUID."'";
@@ -30,6 +35,19 @@ if ($Inserted_into_items == false){
 }
 */
 
+echo "<table>";
+
+echo "<tr>";
+echo "<td>$gallons</td>";
+echo "<td>$address</td>";
+echo "<td>$deliveryDate</td>";
+echo "<td>$pricePerGal</td>";
+echo "<td>$totalPrice</td>";
+echo "</tr>";
+
+echo "</table>";
+
+
 
 /*
 $sql = "INSERT INTO `Books`(`UUID`, `title`, `author_first_name`, `author_last_name`, `publisher`, `genre`, `language`, `year`, `pages`, `dewy_decimal`) 
@@ -44,7 +62,7 @@ else {
     header("Location: ../data_entry.html");
 }
 */
-echo "submitted";
+
 
 }
 //$conn -> close();
