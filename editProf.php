@@ -34,11 +34,14 @@
         $result  = mysqli_query($con, $query);
         if ($result) {
             $query = "UPDATE `users` SET hasEdited = '1' WHERE username = '$username'";
-            $result = mysqli_query($con, $query);
-            echo "<div class='form'>
+            $result1 = mysqli_query($con, $query);
+            if($result1)
+            {
+                echo "<div class='form'>
                   <h3>You completed your profile successfully.</h3><br/>
-                  <p class='link'>Click here to <a href='homePage.html'>Go To Homepage</a></p>
+                  <p class='link'>Click here to <a href='dashboard.php'>Go To Homepage</a></p>
                   </div>";
+            }
         } else {
             echo "<div class='form'>
                   <h3>Required fields are missing.</h3><br/>

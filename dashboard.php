@@ -33,7 +33,10 @@ include("auth_session.php");
             <a class="nav-link" aria-current="page" href="FuelQuoteForm.php">Fuel Qoute</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="./FQ_History.html">History</a>
+            <a class="nav-link" aria-current="page" href="./fqhistory.php">History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="./logout.php">Log Out</a>
           </li>
         </ul>
       </div>

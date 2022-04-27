@@ -18,7 +18,7 @@
         // Check user is exist in the database
         $query    = "SELECT * FROM `users` WHERE username='$username'
                      AND password='" . md5($password) . "'";
-        $result = mysqli_query($con, $query) or die(mysql_error());
+        $result = mysqli_query($con, $query);
         $rows = mysqli_num_rows($result);
         $query = "SELECT hasEdited FROM `users` WHERE username = '$username'";
         $result = mysqli_query($con, $query);
@@ -32,6 +32,7 @@
             else{
                 header("Location: dashboard.php");
             }
+            setcookie("username", $username);
         } else {
             echo "<div class='form'>
                   <h3>Incorrect Username/password.</h3><br/>
