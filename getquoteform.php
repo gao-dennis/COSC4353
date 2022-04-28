@@ -7,13 +7,14 @@
     </head>
 <body>
     <?php
+        //require
         require('db.php');
         session_start();
         $username = $_COOKIE["username"];
         // When form submitted, check and create user session.
         if (isset($_POST['gallons'])) {
             $gallons = stripslashes($_REQUEST['gallons']);    // removes backslashes
-            $gallons = mysqli_real_escape_string($con, $gallons);
+            $gallons = mysqli_real_escape_string($con, $gallons); //
             $gallons = intval($gallons);
             if($gallons > 1000)
             {

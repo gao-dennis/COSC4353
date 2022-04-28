@@ -7,6 +7,7 @@
     </head>
 <body>
     <?php
+        //require
         require('db.php');
         session_start();
         $username = $_COOKIE["username"];
@@ -25,7 +26,7 @@
             $day = stripslashes($_REQUEST['day']);    // removes backslashes
             $day = mysqli_real_escape_string($con, $day);
             $year = stripslashes($_REQUEST['year']);    // removes backslashes
-            $year = mysqli_real_escape_string($con, $year);
+            $year = mysqli_real_escape_string($con, $year); //
 
             $query = "DELETE FROM `temptable` WHERE `Username` = '$username'";
             $result = mysqli_query($con, $query);
