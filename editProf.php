@@ -59,8 +59,8 @@
         <input type="text" class="login-input" name="addy1" placeholder="Address 1">
         <input type="text" class="login-input" name="addy2" placeholder="Address 2 (Optional)">
         <input type="text" class="login-input" name="city" placeholder="City">
-        <input type="text" class="login-input" name="states" placeholder="State">
-        <input type="text" class="login-input" name="zipcode" placeholder="Zipcode">
+        <input type="text" class="login-input" name="states" placeholder="State" maxlength="2">
+        <input type="number" class="login-input" name="zipcode" placeholder="Zipcode" min = 1 max = 99999>
         <input type="submit" name="submit" value="submit" class="login-button">
     </form>
 <?php
