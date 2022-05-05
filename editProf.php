@@ -9,6 +9,7 @@
 <?php
     require('db.php');
     session_start();
+    $username = $_COOKIE["username"];
     // When form submitted, insert values into the database.
     if (isset($_REQUEST['firstname'])) {
         $username = stripslashes($_REQUEST['username']);
@@ -52,15 +53,24 @@
 ?>
     <form class="form" action="" method="post">
         <h1 class="login-title">Finalize Profile</h1>
-        <input type="text" class="login-input" name="username" placeholder="Username">
-        <input type="text" class="login-input" name="firstname" placeholder="First Name">
-        <input type="text" class="login-input" name="middlename" placeholder="Middle Name" >
-        <input type="text" class="login-input" name="lastname" placeholder="Last Name">
-        <input type="text" class="login-input" name="addy1" placeholder="Address 1">
+        <label>Username:</label><br>
+        <input type="text" class="login-input" name="username" value = "<?php echo $username; ?>" readonly>
+        <label>First Name:</label><br>
+        <input type="text" class="login-input" name="firstname" placeholder="First Name" required>
+        <label>Middle Name:</label><br>
+        <input type="text" class="login-input" name="middlename" placeholder="Middle Name">
+        <label>Last Name:</label><br>
+        <input type="text" class="login-input" name="lastname" placeholder="Last Name" required>
+        <label>Address 1:</label><br>
+        <input type="text" class="login-input" name="addy1" placeholder="Address 1" required>
+        <label>Address 2:</label><br>
         <input type="text" class="login-input" name="addy2" placeholder="Address 2 (Optional)">
-        <input type="text" class="login-input" name="city" placeholder="City">
-        <input type="text" class="login-input" name="states" placeholder="State" maxlength="2">
-        <input type="number" class="login-input" name="zipcode" placeholder="Zipcode" min = 1 max = 99999>
+        <label>City:</label><br>
+        <input type="text" class="login-input" name="city" placeholder="City" required>
+        <label>State:</label><br>
+        <input type="text" class="login-input" name="states" placeholder="State" maxlength="2" required>
+        <label>Zipcode:</label><br>
+        <input type="number" class="login-input" name="zipcode" placeholder="Zipcode" min = 1 max = 99999 required>
         <input type="submit" name="submit" value="submit" class="login-button">
     </form>
 <?php
