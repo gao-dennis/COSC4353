@@ -27,7 +27,7 @@ include("auth_session.php");
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="./editProf.php">Profile</a>
+            <a class="nav-link" aria-current="page" href="./updateProf.php">Profile</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="getquoteform.php">Fuel Quote</a>
